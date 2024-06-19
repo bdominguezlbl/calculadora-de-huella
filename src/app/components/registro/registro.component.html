@@ -1,0 +1,75 @@
+<app-login></app-login>
+<div class="" id="bg">
+    <div class="d-flex align-items-start container" id="seccion1">
+        <div id="registroizq">
+            <h5>Se parte de la comunidad que ya mide su impacto</h5>
+            <p>Estos datos nos permitirán crear una cuenta para que puedas regresar a comparar tu impacto en el futuro y
+                a registrar tus compromisos.</p>
+        </div>
+        <div id="registroder">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <form [formGroup]="registroForm" (ngSubmit)="onRegister()">
+                        <div class="form-group mb-3">
+                            <input type="email" class="form-control" formControlName="email"
+                                placeholder="Correo electrónico*" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" formControlName="nombre" placeholder="Nombre*"
+                                required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <input type="text" class="form-control" formControlName="apellidos" placeholder="Apellidos*"
+                                required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <select class="form-select" formControlName="pais">
+                                <option value="" disabled>País de residencia actual*</option>
+                                <option *ngFor="let pais of paises" [value]="pais.nombre">{{ pais.nombre }}</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-3">
+                            <select class="form-select" formControlName="rango_de_edad">
+                                <option value="" disabled>Añadir rango de edad*</option>
+                                <option value="1">0 - 17 Años</option>
+                                <option value="2">18 - 25 Años</option>
+                                <option value="3">26 - 45 Años</option>
+                                <option value="4">46 a más Años</option>
+                            </select>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Acepto" id="politicas"
+                                formControlName="politicas">
+                            <label class="form-check-label" for="politicas">
+                                Acepto la <a href="" id="politicas-texto">política de privacidad</a>
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="Suscribir" id="boletin"
+                                formControlName="boletin">
+                            <label class="form-check-label" for="boletin">
+                                Quiero suscribirme al boletín de sostenibilidad y cambio climático de Libélula
+                            </label>
+                        </div>
+                        <div>
+                            <hr class="border-2">
+                        </div>
+                        <div class="d-flex align-items-center mt-2 mb-4 div-redes">
+                            <p class="m-0 fw-bold">Regístrate con:</p>
+                            <img src="../../../assets/img/google-icon.svg" class="redes">
+                            <img src="../../../assets/img/facebook-icon.svg" class="redes">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between" id="botonRegistro">
+                            <button type="submit" class="btn btn-verde"
+                                [disabled]="!registroForm.valid">Empezar</button>
+                            <a (click)="openModal()">Ya tengo una cuenta</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="personas">
+        <img src="../../../assets/img/personas.svg">
+    </div>
+</div>

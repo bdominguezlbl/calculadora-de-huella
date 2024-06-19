@@ -1,0 +1,93 @@
+#botonRegistro a{
+    color: #0184A6;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+input[type='checkbox']{
+    border-radius: 4px;
+    border: #D9D9D9 5px;
+    background-color: #D9D9D9;
+}
+.form-check-input:checked[type=checkbox]{
+    background-image: url('../../../assets/img/checkbox.svg')!important;
+}
+#politicas-texto{
+    color: #67BB59;
+    font-weight: bold;
+}
+hr{
+    color: #00745F;
+    padding: 10px 0;
+    height: 4px;
+}
+.redes{
+    filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.25));
+    margin-left: 30px;
+}
+h5{
+    color: #00745F;
+    font-size: 44px;
+    font-weight: bold;
+    max-width: 443px;
+    font-family: "Goldplay";
+}
+#registroizq p{
+    max-width: 380px;
+    color: #000000;
+}
+#registroizq{
+    width: 55%;
+}
+#registroder{
+    width: 45%;
+}
+form{
+    max-width: 446px;
+}
+#bg{
+    background-image: url(../../../assets/img/registro-fondo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 0 0;
+}
+.personas{
+    margin-top: -250px;
+}
+
+@media (max-width:768px) {
+    #bg{
+        padding: 50px 0 0 0;
+    }
+    #seccion1{
+        flex-direction: column;
+    }
+    #registroizq, #registroder{
+        width: 100%!important;
+    }
+    h5, p, form{
+        max-width: 100%!important;
+    }
+    h5, p{
+        text-align: center;
+    }
+    .personas{
+        margin-top: 50px;
+    }
+    .personas img{
+        width: 100%;
+    }
+    .div-redes{
+        justify-content: center;
+    }
+    #botonRegistro{
+        flex-direction: column;
+    }
+    #botonRegistro a{
+        margin-top: 15px;
+    }
+    h5{
+        font-size: 34px;
+    }
+}

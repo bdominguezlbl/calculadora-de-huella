@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "Goldplay";
+    src: url("./assets/fonts/Goldplay-Bold.ttf");
+    src: url("./assets/fonts/Goldplay-Bold.ttf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+body{
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    color: #606060;
+}
+a{
+    text-decoration: none;
+}
+input[type='text'], input[type='email'], .form-select{
+    border-radius: 27px!important;
+    color: #606060;
+    border: none;
+    padding: 15px 20px;
+}
+.btn-verde{
+    border-radius: 24px;
+    color: white;
+    background-color: #67BB59;
+    font-weight: bold;
+    padding: 12px 60px;
+}
+.btn-verde:hover{
+    color: white;
+    background-color: #67BB59;
+}
+
+@media (max-width:768px){
+    body{
+        font-size: 14px;
+    }
+    input[type='text'], input[type='email'], .form-select{
+        font-size: 14px;
+    }
+    #navbarbg div{
+        justify-content: center;
+    }
+}

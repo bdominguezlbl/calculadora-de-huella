@@ -1,0 +1,13 @@
+#navbarbg{
+    background-color: #6D9008;
+    padding: 8px 0;
+}
+#navbarNav{
+    padding: 20px 0;
+}
+#navbarNav a{
+    color: #606060;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
